@@ -18,29 +18,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1"
-]
-if not DEBUG:
-    ALLOWED_HOSTS = [
-        "guillen-system.onrender.com",'*onrender.com'
-    ]
+ALLOWED_HOSTS = ['*', 'guillen-system.onrender.com', '*onrender.com']
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    'http://localhost:8000',
 
-]
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'http://localhost:8000', 'http://127.0.0.1:8000',
+    'http://127.0.0.1:3000', 'https://guillen-system.onrender.com']
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3000',
-    'http://localhost:8000',
-]
-
-if not DEBUG:
-    CORS_ORIGIN_WHITELIST = ['https://guillen-system.onrender.com']
-    CSRF_TRUSTED_ORIGINS = ['https://guillen-system.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://localhost:8000', 'http://127.0.0.1:8000',
+    'http://127.0.0.1:3000'
+    'https://guillen-system.onrender.com']
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
@@ -185,15 +171,7 @@ DJOSER = {
 
 # AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
 AUTH_USER_MODEL = "users.UserAccount"
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'Greenbox - Logistica <almacen.mp@greenbox.pe'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = env('EMAIL_PORT')
-EMAIL_USE_TLS = env('EMAIL_USE_TLS')
 
 # Default primary key field type
 
