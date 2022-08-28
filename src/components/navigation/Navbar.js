@@ -111,7 +111,7 @@ export default function Navbar() {
                                 <NavLink to="/">
                                     {/* Dark Image */}
                                     <img
-                                        className="mx-auto  h-12 p-2 w-max"
+                                        className="mx-auto w-12 h-12 p-2 w-max"
                                         src={require("../../assets/logo.png")}
                                         alt="Guillent"
                                     />
