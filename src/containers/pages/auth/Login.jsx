@@ -64,7 +64,7 @@ export default function Login() {
                     <div className=" min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8 z-50">
                         <div className="sm:mx-auto sm:w-full sm:max-w-md z-10">
                             <img
-                                className="mx-auto h-24  w-24"
+                                className="mx-auto h-24  w-28"
                                 src={require("../../../assets/logo.png")}
                                 alt="Guillent"
                             />
