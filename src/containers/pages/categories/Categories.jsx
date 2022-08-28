@@ -76,7 +76,7 @@ const Categories = () => {
 
     const handleDelete = (id) => {
         MySwal.fire({
-            title: '¿Desea eliminar este contacto?',
+            title: '¿Desea eliminar esta categoria?',
             icon: 'warning',
             showCancelButton: true,
             cancelButtonColor: '#3085d6',
